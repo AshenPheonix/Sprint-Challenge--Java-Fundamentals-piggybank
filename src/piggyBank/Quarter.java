@@ -45,6 +45,6 @@ public class Quarter extends Coin {
 
     @Override
     public void remove(int num) {
-        count-=1;
+        count-=num;
     }
 }
