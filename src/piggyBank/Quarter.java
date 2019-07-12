@@ -7,10 +7,20 @@ public class Quarter implements Coin {
 
     public Quarter(){
         count++;
+        print(1);
     }
 
     public Quarter(int num){
         count+=num;
+        print(num);
+    }
+
+    private void print(int num){
+        if(num>1)
+            System.out.printf("%d Quarter",num);
+        else
+            System.out.printf("%d Quarters",num);
+        System.out.println();
     }
 
     @Override

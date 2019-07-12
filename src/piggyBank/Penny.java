@@ -7,10 +7,20 @@ public class Penny implements Coin{
 
     public Penny(){
         count++;
+        print(1);
     }
 
     public Penny(int num){
         count+=num;
+        print(num);
+    }
+
+    private void print(int num){
+        if(num>1)
+            System.out.printf("%d Penny",num);
+        else
+            System.out.printf("%d Pennies",num);
+        System.out.println();
     }
 
     @Override

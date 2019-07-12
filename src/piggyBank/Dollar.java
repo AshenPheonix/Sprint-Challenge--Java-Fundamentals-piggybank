@@ -7,10 +7,17 @@ public class Dollar implements Coin{
 
     public Dollar(){
         count++;
+        print(1);
     }
 
     public Dollar(int num){
         count+=num;
+        print(num);
+    }
+
+    private void print(int num){
+        System.out.printf("$%d",num);
+        System.out.println();
     }
 
     @Override

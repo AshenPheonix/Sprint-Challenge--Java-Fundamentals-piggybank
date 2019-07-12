@@ -7,10 +7,20 @@ public class Nickel implements Coin{
 
     public Nickel(){
         count++;
+        print(1);
     }
 
     public Nickel(int num){
         count+=num;
+        print(num);
+    }
+
+    private void print(int num){
+        if(num>1)
+            System.out.printf("%d Nickel",num);
+        else
+            System.out.printf("%d Nickels",num);
+        System.out.println();
     }
 
     @Override

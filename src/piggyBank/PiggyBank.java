@@ -12,19 +12,14 @@ public class PiggyBank {
     public void add(Coin added){
         if(added instanceof Quarter){
             currentQuarter=(Quarter)added;
-            System.out.println(currentQuarter);
         }else if(added instanceof Dollar){
             currentDollar=(Dollar)added;
-            System.out.println(currentDollar);
         }else if(added instanceof Dime){
             currentDime=(Dime)added;
-            System.out.println(currentDime);
         }else if(added instanceof Nickel){
             currentNickel=(Nickel)added;
-            System.out.println(currentNickel);
         }else if(added instanceof Penny){
             currentPenny=(Penny)added;
-            System.out.println(currentPenny);
         }
     }
 

@@ -7,10 +7,20 @@ public class Dime implements Coin{
 
     public Dime(){
         count++;
+        print(1);
     }
 
     public Dime(int num){
         count+=num;
+        print(num);
+    }
+
+    private void print(int num){
+        if(num>1)
+            System.out.printf("%d Dime",num);
+        else
+            System.out.printf("%d Dimes",num);
+        System.out.println();
     }
 
     @Override
