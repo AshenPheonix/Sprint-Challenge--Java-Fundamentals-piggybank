@@ -25,6 +25,11 @@ public class PiggyBank {
 
     public void print(){
         DecimalFormat fp = new DecimalFormat("$###,###.00");
+
+        System.out.println("The Piggy Bank Holds "+fp.format(total()));
+    }
+
+    private double total(){
         double total=0;
 
         total+=(currentQuarter.getTotal()/100.0);
@@ -32,7 +37,33 @@ public class PiggyBank {
         total+=(currentDime.getTotal()/100.0);
         total+=(currentPenny.getTotal()/100.0);
         total+=(currentNickel.getTotal()/100.0);
+        return total;
+    }
 
-        System.out.println("The Piggy Bank Holds "+fp.format(total));
+    public void contents(){
+        if(currentDollar.getCount()>0)
+            System.out.println(currentDollar);
+        if(currentQuarter.getCount()>0)
+            System.out.println(currentQuarter);
+        if(currentDime.getCount()>0)
+            System.out.println(currentDime);
+        if(currentNickel.getCount()>0)
+            System.out.println(currentNickel);
+        if(currentPenny.getCount()>0)
+            System.out.println(currentPenny);
+    }
+
+    public void remove(double amount){
+        int temp=(int)(amount*100);
+        if(amount>total()) {
+            System.out.println("Not enough money in the piggy bank");
+        }else {
+            temp = currentDollar.parse(temp);
+            temp = currentQuarter.parse(temp);
+            temp = currentDime.parse(temp);
+            temp = currentNickel.parse(temp);
+            temp = currentPenny.parse(temp);
+            contents();
+        }
     }
 }

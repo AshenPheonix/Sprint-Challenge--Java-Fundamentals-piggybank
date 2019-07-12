@@ -1,6 +1,6 @@
 package piggyBank;
 
-public class Quarter implements Coin {
+public class Quarter extends Coin {
     private static final int VALUE=25;
 
     private static int count=0;
@@ -24,6 +24,10 @@ public class Quarter implements Coin {
     }
 
     @Override
+    public int getValue() {
+        return 25;
+    }
+    @Override
     public int getCount() {
         return count;
     }
@@ -34,6 +38,13 @@ public class Quarter implements Coin {
 
     @Override
     public String toString() {
+        if(count==0)
+            return "";
         return count + (count>1?" Quarters":" Quarter");
+    }
+
+    @Override
+    public void remove(int num) {
+        count-=1;
     }
 }

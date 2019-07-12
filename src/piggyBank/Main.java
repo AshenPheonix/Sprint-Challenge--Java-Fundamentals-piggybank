@@ -13,5 +13,7 @@ public class Main {
         piggyBank.add(new Penny(10));
 
         piggyBank.print();
+        System.out.println("\n*** Removal ***");
+        piggyBank.remove(1.50);
     }
 }

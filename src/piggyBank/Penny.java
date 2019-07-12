@@ -1,6 +1,6 @@
 package piggyBank;
 
-public class Penny implements Coin{
+public class Penny extends Coin{
     private static final int VALUE=1;
 
     private static int count=0;
@@ -30,6 +30,16 @@ public class Penny implements Coin{
     @Override
     public int getTotal(){
         return count*VALUE;
+    }
+
+    @Override
+    public int getValue() {
+        return 1;
+    }
+
+    @Override
+    public void remove(int num) {
+        count-=num;
     }
 
     @Override

@@ -1,6 +1,6 @@
 package piggyBank;
 
-public class Nickel implements Coin{
+public class Nickel extends Coin{
     private static final int VALUE=5;
 
     private static int count=0;
@@ -13,6 +13,16 @@ public class Nickel implements Coin{
     public Nickel(int num){
         count+=num;
         print(num);
+    }
+
+    @Override
+    public int getValue() {
+        return 5;
+    }
+
+    @Override
+    public void remove(int num) {
+        count-=num;
     }
 
     private void print(int num){
