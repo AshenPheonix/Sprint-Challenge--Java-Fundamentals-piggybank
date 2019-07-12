@@ -1,6 +1,6 @@
 package piggyBank;
 
-public class Dollar {
+public class Dollar implements Coin{
     private static final int VALUE=100;
 
     private static int count=0;
@@ -13,10 +13,17 @@ public class Dollar {
         count+=num;
     }
 
-    public static int getCount() {
+    @Override
+    public int getCount() {
         return count;
     }
+    @Override
     public int getTotal(){
         return count*VALUE;
+    }
+
+    @Override
+    public String toString() {
+        return "$"+count;
     }
 }
